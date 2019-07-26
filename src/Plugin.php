@@ -140,10 +140,12 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         $bowerFile = $dir . DIRECTORY_SEPARATOR . 'bower.json';
         if (file_exists($bowerFile)) {
             $bowerConfig = json_decode(file_get_contents($bowerFile));
-
-            foreach ($bowerConfig->ignore as $pattern) {
-                $cleaner->addPattern($pattern);
+            if (property_exists($bowerConfig, 'ignore')) {
+                foreach ($bowerConfig->ignore as $pattern) {
+                    $cleaner->addPattern($pattern);
+                }
             }
+
         }
 
         return $cleaner->execute();
