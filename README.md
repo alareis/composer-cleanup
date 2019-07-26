@@ -15,6 +15,16 @@ Require this package in your composer.json:
 
 This plugin will work automatically on any packages installed as `dist`. Therefore, if you are using it to build a package archive, simply run `composer install` with the `--prefer-dist` option.
 
+## Configuration
+You can add custom rules in config section of composer file, like this:
+
+    "config": {
+        "cleanup": {
+            "bower-asset/moment-timezone" : [
+                "data/unpacked"
+            ]
+        },
+    },
 ## What does it do?
 
 For every installed or updated package in the default list, in general:
