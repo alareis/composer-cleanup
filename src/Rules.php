@@ -29,7 +29,7 @@ class Rules
     {
         $docs = [
             'README*', 'CHANGELOG*', 'FAQ*', 'CONTRIBUTING*', 'HISTORY*',
-            'UPGRADING*', 'UPGRADE*', 'package*', 'demo', 'example', 'examples',
+            'UPGRADING*', 'UPGRADE*', 'package*', 'demo', 'demos', 'example', 'examples',
             'doc', 'docs', 'readme*', 'changelog*', 'composer*'
         ];
 
@@ -49,6 +49,36 @@ class Rules
             'barryvdh/composer-cleanup-plugin'      => array_merge($docs, $tests),
             'barryvdh/laravel-debugbar'             => array_merge($docs, $tests),
             'barryvdh/laravel-ide-helper'           => array_merge($docs, $tests),
+            "bower-asset/moment"                    => array_merge($docs, $tests, [
+                "src"
+            ]),
+            "bower-asset/moment-timezone"           => array_merge($docs, $tests, [
+                "data/unpacked"
+            ]),
+            "bower-asset/fullcalendar"              => array_merge($docs, $tests, [
+                "src",
+                "tasks",
+                "/*lock.json"
+            ]),
+            "bower-asset/fullcalendar-scheduler"    => array_merge($docs, $tests, [
+                "src",
+                "tasks",
+                "/*lock.json"
+            ]),
+            "bower-asset/jquery"                    => array_merge($docs, $tests, [
+                "src",
+                "/*lock.json"
+            ]),
+            "bower-asset/intl-tel-input"            => array_merge($docs, $tests, [
+                "src",
+                "/*lock.json"
+            ]),
+            "npm-asset/jsoneditor"                  => array_merge($docs, $tests, [
+                "src",
+            ]),
+            "npm-asset/brace"                       => array_merge($docs, $tests, [
+                "worker"
+            ]),
             'bllim/datatables'                      => array_merge($docs, $tests),
             'cartalyst/sentry'                      => array_merge($docs, $tests),
             'classpreloader/classpreloader'         => array_merge($docs, $tests),
