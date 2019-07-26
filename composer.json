@@ -2,7 +2,7 @@
   "name": "alareis/composer-cleanup",
   "type": "composer-plugin",
   "description": "A composer cleanup plugin",
-  "version" : "0.1.0",
+  "version" : "0.1.2",
   "license": "LGPL-3.0",
   "minimum-stability": "stable",
   "authors": [
