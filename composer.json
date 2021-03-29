@@ -2,7 +2,7 @@
   "name": "alareis/composer-cleanup",
   "type": "composer-plugin",
   "description": "A composer cleanup plugin",
-  "version" : "0.1.4",
+  "version" : "0.2.0",
   "license": "LGPL-3.0",
   "minimum-stability": "stable",
   "authors": [
@@ -14,10 +14,10 @@
   ],
   "require": {
     "ext-json": "*",
-    "composer-plugin-api": "^1.1"
+    "composer-plugin-api": "^1.0|^2.0"
   },
   "require-dev": {
-    "composer/composer": "^1.5.0"
+    "composer/composer": "^1.0|^2.0"
   },
   "autoload": {
     "psr-4": {
@@ -27,7 +27,7 @@
   "extra": {
     "class": "Alareis\\Composer\\Cleanup\\Plugin",
     "branch-alias": {
-      "dev-master": "0.1.4"
+      "dev-master": "0.2.0"
     }
   }
 
